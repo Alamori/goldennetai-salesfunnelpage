@@ -1,0 +1,228 @@
+import React from 'react';
+import { Users, Shield, Zap, BarChart, Clock, Trophy, TrendingDown, AlertTriangle, DollarSign, Ban, Target, Calendar } from 'lucide-react';
+import { HeroSection } from '../components/HeroSection';
+import { ProblemSection } from '../components/ProblemSection';
+import { SolutionSection } from '../components/SolutionSection';
+import { MidPageCTA } from '../components/MidPageCTA';
+import { MarketChallengesSection } from '../components/MarketChallengesSection';
+import { OperationalIssuesSection } from '../components/OperationalIssuesSection';
+import { SocialProofSection } from '../components/SocialProofSection';
+import { FAQSection } from '../components/FAQSection';
+import { CalendlySection } from '../components/CalendlySection';
+
+export default function HomePage() {
+  const scrollToCalendly = () => {
+    const element = document.getElementById('calendly-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-white">
+      <HeroSection
+        title="Automate Your"
+        highlightedText="Business Success"
+        subtitle="Transform your operations with AI-powered automation that works 24/7, cutting costs and boosting efficiency across your entire organization"
+        badgeText="Next-Gen AI Automation"
+        primaryButtonText="Start Now"
+        onButtonClick={scrollToCalendly}
+        trustText={{main: "Trusted by Industry Leaders", sub: "Powering automation across healthcare, education, and enterprise"}}stats={{ value: "85%", label: "Average Time Saved"}}
+
+
+        heroImage={{
+          src: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80",
+          alt: "Business Growth"
+        }}
+      />
+
+      <ProblemSection
+        title="Manual Work Kills Growth"
+        problems={[
+          { icon: Users, title: "Time Slipping Away", description: "Your team wastes countless hours on repetitive tasks while strategic opportunities pass by untouched." },
+          { icon: Shield, title: "Disconnected Tech Stack", description: "Your vital business tools operate in isolation, creating frustrating data silos that cripple productivity." },
+          { icon: Zap, title: "Revenue Leaking Fast", description: "Slow follow-ups and manual processes let valuable leads slip through the cracks, costing you real revenue." }
+        ]}
+      />
+
+      <SolutionSection
+        title="Automate Success, Multiply Results"
+        solutions={[
+          "AI-powered automation eliminates repetitive tasks, giving you back 20+ hours weekly.",
+          "Seamless API integrations connect your tools for instant cross-platform data flow.",
+          "Smart lead-routing automation captures and nurtures prospects 24/7 automatically."
+        ]}
+
+        image={{
+          src: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
+          alt: "Business Solution"
+        }}
+        stats={{
+          value: "300% ROI",
+          label: "Average Client Return"
+        }}
+      />
+
+      <MidPageCTA
+        title="Trusted By Industry Leaders"
+        subtitle="Transform your business with AI-powered automation that saves time and money"
+        ctaButton={{
+          text: "Start Free Trial",
+          subtext: "Transform your business with AI-powered automation that saves time and money"
+        }}
+        onButtonClick={scrollToCalendly}
+        backgroundImage="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=2000&q=80"
+      />
+
+      <MarketChallengesSection
+        title="Face These Facts Head-On"
+        subtitle="Recognizing these industry challenges is your first step toward transforming operational inefficiency into competitive advantage."
+        challenges={[
+          {
+            icon: TrendingDown,
+            title: "Manual Work Drains Resources",
+            description: "Every hour spent on repetitive tasks costs you talented employee time and strategic growth opportunities."
+          },
+          {
+            icon: AlertTriangle,
+            title: "Integration Gaps Block Progress",
+            description: "Disconnected systems create data bottlenecks, preventing smooth information flow and real-time decision making."
+          },
+          {
+            icon: DollarSign,
+            title: "Customer Experience Suffers",
+            description: "Delayed responses and inconsistent service levels damage your reputation and push valuable customers to competitors."
+          }
+        ]}
+        backgroundImage="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=2000&q=80"
+      />
+
+      <OperationalIssuesSection
+        title="Modern Business Roadblocks Revealed"
+        subtitle="Confront these market challenges to unlock your business potential"
+        issues={[
+          {
+            icon: Clock,
+            title: "Scaling Limitations",
+            description: "Manual operations restrict growth potential and strain resources as demand increases."
+          },
+          {
+            icon: Ban,
+            title: "Tech Overwhelm",
+            description: "Complex automation tools create implementation paralysis and delayed digital transformation."
+          },
+          {
+            icon: Target,
+            title: "Tech Overwhelm
+",
+            description: "Complex automation tools create implementation paralysis and delayed digital transformation.
+"
+          }
+        ]}
+      />
+
+      <SocialProofSection
+        title="Real Results, Powered by AI"
+        subtitle="Join hundreds of businesses transforming their operations with our intelligent automation solutions"
+        testimonials={[
+          {
+            name: "Sarah Chen",
+            role: "CTO, Healthcare Innovation Group",
+            content: "GoldenNet AI automated our patient scheduling system, reducing wait times by 65% and saving 30 staff hours weekly.",
+            image: {
+              src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80",
+              alt: "Sarah Chen"
+            }
+          },
+          {
+            name: "Michael Rodriguez",
+            role: "Operations Director, Global Logistics",
+content: "The AI chatbot handles 80% of customer inquiries automatically. Our support team now focuses on complex strategic issues.",
+            image: {
+              src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80",
+              alt: "Michael Rodriguez"
+            }
+          },
+          {
+            name: "Emily Watson",
+            role: "CEO, TechStart Solutions",
+            content: "The AI chatbot handles 80% of customer inquiries automatically. Our support team now focuses on complex strategic issues.",
+            image: {
+              src: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=400&q=80",
+              alt: "Emily Watson"
+            }
+          }
+        ]}
+        backgroundImage="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=2000&q=80"
+      />
+
+      <FAQSection
+        title="AI Automation Solutions FAQ"
+        subtitle="Get quick answers about our AI-powered automation services and solutions"
+        backgroundImage="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=2000&q=80"
+        gradientColors={{
+          from: "blue-600",
+          to: "purple-600"
+        }}
+        decorativeColors={{
+          first: "bg-blue-200",
+          second: "bg-purple-200",
+          third: "bg-pink-200"
+        }}
+        faqs={[
+          {
+            question: "How quickly can GoldenNet AI implement automation solutions?",
+            answer: "Most implementations are completed within 2-4 weeks, depending on complexity. We ensure quick deployment while maintaining quality and security standards."
+          },
+          {
+            question: "Do I need technical expertise to use your solutions?",
+            answer: "No technical expertise required. Our no-code solutions and user-friendly interfaces make it easy for any team member to manage automated workflows."
+          },
+          {
+            question: "How secure are your AI automation solutions?",
+            answer: "We implement enterprise-grade security protocols, regular audits, and data encryption. Your information is protected according to industry standards."
+          },
+          {
+            question: "Can your solutions integrate with our existing software?",
+            answer: "Yes! Our solutions integrate with most popular business tools through APIs, including CRMs, marketing platforms, and management systems."
+          },
+          {
+            question: "What ROI can we expect from your automation solutions?",
+            answer: "Clients typically see 40-60% reduction in manual work hours and 30% increase in operational efficiency within the first three months."
+          },
+          {
+            question: "Do you provide support after implementation?",
+            answer: "Yes, we offer comprehensive post-implementation support, including 24/7 technical assistance and regular system optimization reviews."
+          }
+        ]}
+      />
+
+      <CalendlySection
+        id="calendly-section"
+        title="Transform Your Business With AI Today"
+        subtitle="Discover how our AI automation experts can save you 20+ hours weekly"
+        badgeIcon={Clock}
+        badgeText="Free Strategy Session"
+        features={[
+          {
+            icon: Calendar,
+            title: "Flexible Scheduling",
+            description: "Choose a time that works best for you"
+          },
+          {
+            icon: Clock,
+            title: "15-Minute Session",
+            description: "Focused discussion on your business needs"
+          },
+          {
+            icon: Users,
+            title: "Expert Consultation",
+            description: "Meet with our senior growth strategist"
+          }
+        ]}
+        calendlyUrl="https://calendly.com/goldennetai/demo (or your actual Calendly link for scheduling calls)"
+        backgroundImage="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=2000&q=80"
+      />
+    </div>
+  );
+}
